@@ -2,7 +2,18 @@ package implementations;
 
 import interfaces.FilaDePrioridade;
 
+import java.util.Arrays;
+
 public class MaxHeapComArranjo implements FilaDePrioridade {
+
+//    Pesquisando a fórmula para usar nas funções de obter esquerda, direita e pai percebi que essa fórmula fornecida pelo slide do professor:
+//    Se i = 0 (pai)
+//    2x0 = 0 (esquerda)
+//    2x0+1 = 1 (direita)
+//
+//    Ficaria errado o array, ao sobrescrever o pai com filho esquerdo
+//
+//    Só que está sendo tratado o caso do i=0, é como se i=1 fosse o início da fórmula mesmo
 
     // Array de Nodo
     private Nodo heap[];
@@ -93,6 +104,10 @@ public class MaxHeapComArranjo implements FilaDePrioridade {
             corrigirDeCimaParaBaixo(maior);
         }
     }
-
+    public void exibirArranjo(){
+        for(var i = 0; i < heap.length; i++){
+            if(heap[i] != null) System.out.println("Index: " + i + " | Valor: " + heap[i].getValor());
+        }
+    }
 
 }

@@ -1,18 +1,18 @@
 import implementations.FilaDePrioridadeNaoOrdenada;
+import implementations.MaxHeapComArranjo;
 
 public class Main {
 
     public static void main(String args[]){
         System.out.println("Rodando...");
 
-        FilaDePrioridadeNaoOrdenada fila = new FilaDePrioridadeNaoOrdenada();
+        MaxHeapComArranjo maxheap = new MaxHeapComArranjo();
 
-        fila.adicionar(10, 1);
-        fila.adicionar(1000, 25);
-        fila.adicionar(10, 15);
-        fila.adicionar(100, 10);
+        maxheap.adicionar(10, 10);
+        maxheap.adicionar(20, 20);
+        maxheap.adicionar(30, 30);
 
-        System.out.println("Obtive: " + fila.obter());;
+        maxheap.exibirArranjo();
 
     }
 
